@@ -1,6 +1,11 @@
+---
 spring:
+  profiles:
+    active: ghost
   cloud:
     config:
       uri: http://localhost:8001
   application:
     name: johnny-cash
+server:
+  port: 8002
