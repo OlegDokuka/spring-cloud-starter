@@ -1,0 +1,44 @@
+---
+# Items that apply to ALL profiles:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+spring:
+  server:
+    port: ${PORT:${SERVER_PORT:0}}
+
+---
+spring:
+  profiles: subject
+  application:
+    name: eureka-starter-subject
+words: I,You,He,She,It
+
+---
+spring:
+  profiles: verb
+  application:
+    name: eureka-starter-verb
+words: ran,knew,had,saw,bought
+
+---
+spring:
+  profiles: article
+  application:
+    name: eureka-starter-article
+words: a,the
+
+---
+spring:
+  profiles: adjective
+  application:
+    name: eureka-starter-adjective
+words: reasonable,leaky,suspicious,ordinary,unlikely
+
+---
+spring:
+  profiles: noun
+  application:
+    name: eureka-starter-noun
+words: boat,book,vote,seat,backpack,partition,groundhog  
