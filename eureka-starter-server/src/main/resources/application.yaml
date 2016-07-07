@@ -1,6 +1,7 @@
 server:
   port: 8010
 
+
 eureka:
   client:
     registerWithEureka: false
@@ -9,6 +10,12 @@ eureka:
       waitTimeInMsWhenSyncEmpty: 0
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+spring:
+  cloud:
+    config:
+      discovery:
+        service-id: cloud-config-serve
+        enabled: true
 
 # primary, secondary, and tertiary illustrate running 3 intercommunicating instances.  This example has them running
 # side-by-side on localhost -- which is unrealistic in production -- but does illustrate how multiple instances collaborate.

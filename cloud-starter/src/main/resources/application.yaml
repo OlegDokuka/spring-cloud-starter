@@ -11,3 +11,7 @@ spring:
           searchLocations: classpath:offline-repository/
 server:
   port: 8001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/,http://localhost:8011/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/

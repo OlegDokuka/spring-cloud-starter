@@ -1,5 +1,25 @@
+---
 spring:
   cloud:
     config:
-      uri: http://localhost:8001
       fail-fast: true
+
+---
+spring:
+  profiles: config-first-bootstrap
+  cloud:
+    config:
+      uri: http://localhost:8001
+
+---
+spring:
+  profiles: discovery-first-bootstrap
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: cloud-config-serve
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/,http://localhost:8011/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
