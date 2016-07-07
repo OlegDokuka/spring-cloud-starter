@@ -15,6 +15,9 @@ hs_err_pid*
 #Idea folders
 /**/.idea/*
 
+#Gradle build cache
+/**/.gradle/*
+
 #build
 /**/build/*
 /**/classes/*
