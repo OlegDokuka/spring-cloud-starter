@@ -1,9 +1,6 @@
 ---
 # Items that apply to ALL profiles:
 eureka:
-  instance:
-    metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
   client:
     service-url:
       defaultZone: http://localhost:8010/eureka/,http://localhost:8011/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
@@ -17,6 +14,10 @@ spring:
   application:
     name: eureka-starter-subject
 words: I,You,He,She,It
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 ---
 spring:
@@ -24,6 +25,10 @@ spring:
   application:
     name: eureka-starter-verb
 words: ran,knew,had,saw,bought
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 ---
 spring:
@@ -31,6 +36,10 @@ spring:
   application:
     name: eureka-starter-article
 words: a,the
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 ---
 spring:
@@ -38,13 +47,21 @@ spring:
   application:
     name: eureka-starter-adjective
 words: reasonable,leaky,suspicious,ordinary,unlikely
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 ---
 spring:
   profiles: noun
   application:
     name: eureka-starter-noun
-words: boat,book,vote,seat,backpack,partition,groundhog  
+words: boat,book,vote,seat,backpack,partition,groundhog 
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
 
 ---
 spring:
@@ -52,6 +69,10 @@ spring:
   application:
     name: eureka-starter-subject
 words: Я,Вы,Ты,Он,Она,Это
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 ---
 spring:
@@ -59,6 +80,10 @@ spring:
   application:
     name: eureka-starter-verb
 words: бежал,знал,имел,видел,покупал
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 ---
 spring:
@@ -66,6 +91,10 @@ spring:
   application:
     name: eureka-starter-article
 words: какой-то,конкретный
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 ---
 spring:
@@ -73,6 +102,10 @@ spring:
   application:
     name: eureka-starter-adjective
 words: разумно,дырявое,подозрительный,обычный,маловероятно
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
 ---
 spring:
@@ -80,3 +113,7 @@ spring:
   application:
     name: eureka-starter-noun
 words: лодка,книга,голосование,место,рюкзак,перегородка,сурок 
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
