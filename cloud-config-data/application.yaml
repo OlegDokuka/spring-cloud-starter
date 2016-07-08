@@ -42,3 +42,38 @@ spring:
   application:
     name: eureka-starter-noun
 words: boat,book,vote,seat,backpack,partition,groundhog  
+
+---
+spring:
+  profiles: subject-ru
+  application:
+    name: eureka-starter-subject
+words: Я,Вы,Ты,Он,Она,Это
+
+---
+spring:
+  profiles: verb-ru
+  application:
+    name: eureka-starter-verb
+words: бежал,знал,имел,видел,покупал
+
+---
+spring:
+  profiles: article-ru
+  application:
+    name: eureka-starter-article
+words: какой-то,конкретный
+
+---
+spring:
+  profiles: adjective-ru
+  application:
+    name: eureka-starter-adjective
+words: разумно,дырявое,подозрительный,обычный,маловероятно
+
+---
+spring:
+  profiles: noun-ru
+  application:
+    name: eureka-starter-noun
+words: лодка,книга,голосование,место,рюкзак,перегородка,сурок 
