@@ -1,0 +1,30 @@
+{
+    "health": {
+        "title": "Состояние",
+        "refresh.button": "Обновить",
+        "stacktrace": "Stacktrace",
+        "details": {
+            "details": "Детали",
+            "properties": "Параметры",
+            "name": "Имя",
+            "value": "Значение",
+            "error": "Ошибка"
+        },
+        "indicator": {
+            "discoveryComposite": "Discovery Composite",
+            "refreshScope": "Microservice Refresh Scope",
+            "configServer": "Microservice Config Server",
+            "diskSpace": "Место на диске",
+            "mail": "Email",
+            "db": "База данных"
+        },
+        "table": {
+            "service": "Название сервиса",
+            "status": "Статус"
+        },
+        "status": {
+            "UP": "UP",
+            "DOWN": "DOWN"
+        }
+    }
+}

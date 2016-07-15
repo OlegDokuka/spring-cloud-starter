@@ -1,4 +1,4 @@
 ---
 spring:
   application:
-    name: cloud-config-serve
+    name: configserver
