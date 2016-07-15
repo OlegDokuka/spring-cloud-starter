@@ -22,3 +22,6 @@ hs_err_pid*
 /**/build/*
 /**/classes/*
 /**/target/*
+
+#logs
+*./log
