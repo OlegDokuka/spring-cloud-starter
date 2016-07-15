@@ -10,7 +10,7 @@ spring:
         native:
           searchLocations: classpath:offline-repository/
 server:
-  port: 8001
+  port: 8761
 eureka:
   client:
     service-url:

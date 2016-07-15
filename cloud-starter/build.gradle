@@ -25,7 +25,6 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.cloud:spring-cloud-config-server')
 	compile('org.springframework.cloud:spring-cloud-starter-bus-amqp')

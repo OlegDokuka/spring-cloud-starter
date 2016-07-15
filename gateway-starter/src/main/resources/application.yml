@@ -1,0 +1,52 @@
+debug: true
+logging:
+  level:
+    org.springframework.security: DEBUG
+    com.netflix.discovery: 'OFF'
+# Allow thymeleaf template changes to reload:
+spring.thymeleaf.cache: false
+zuul:
+  routes:
+    oauth:
+      path: /uaa/**
+      serviceId: sso-server
+      stripPrefix: false
+    noun:
+      path: /api/noun
+      serviceId: eureka-starter-noun
+    verb:
+      path: /api/verb
+      serviceId: eureka-starter-verb
+    article:
+      path: /api/article
+      serviceId: eureka-starter-article
+    adjective:
+      path: /api/adjective
+      serviceId: eureka-starter-adjective
+    subject:
+      path: /api/subject
+      serviceId: eureka-starter-subject
+
+
+security:
+  basic:
+    enabled: false
+  user:
+    password: user
+  ignored: /,/favicon.ico,/index.html,/home.html,/dashboard.html,/js/**,/css/**,/webjars/**,/uaa/**
+  sessions: STATELESS
+  oauth2:
+    client:
+      accessTokenUri: http://localhost:8081/uaa/oauth/token
+      userAuthorizationUri: http://localhost:8081/uaa/oauth/authorize
+      clientId: acme
+      clientSecret: acmesecret
+    resource:
+ #     id: openid
+      serviceId: ${PREFIX:}resource
+      token-info-uri: http://localhost:8080/uaa/oauth/check_token
+management:
+  security:
+    role: HERO
+server:
+  port: ${PORT:8081}
