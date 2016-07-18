@@ -14,68 +14,68 @@ spring:
 spring:
   profiles: subject
   application:
-    name: eureka-starter-subject
+    name: subject
 words: I,You,He,She,It
 
 ---
 spring:
   profiles: verb
   application:
-    name: eureka-starter-verb
+    name: verb
 words: ran,knew,had,saw,bought
 
 ---
 spring:
   profiles: article
   application:
-    name: eureka-starter-article
+    name: article
 words: a,the
 
 ---
 spring:
   profiles: adjective
   application:
-    name: eureka-starter-adjective
+    name: adjective
 words: reasonable,leaky,suspicious,ordinary,unlikely
 
 ---
 spring:
   profiles: noun
   application:
-    name: eureka-starter-noun
+    name: noun
 words: boat,book,vote,seat,backpack,partition,groundhog  
 
 ---
 spring:
   profiles: subject-ru
   application:
-    name: eureka-starter-subject
+    name: subject
 words: Я,Вы,Ты,Он,Она,Это
 
 ---
 spring:
   profiles: verb-ru
   application:
-    name: eureka-starter-verb
+    name: verb
 words: бежал,знал,имел,видел,покупал
 
 ---
 spring:
   profiles: article-ru
   application:
-    name: eureka-starter-article
+    name: article
 words: какой-то,конкретный
 
 ---
 spring:
   profiles: adjective-ru
   application:
-    name: eureka-starter-adjective
+    name: adjective
 words: разумно,дырявое,подозрительный,обычный,маловероятно
 
 ---
 spring:
   profiles: noun-ru
   application:
-    name: eureka-starter-noun
+    name: noun
 words: лодка,книга,голосование,место,рюкзак,перегородка,сурок 
