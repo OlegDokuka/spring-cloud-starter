@@ -51,14 +51,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .csrf().requireCsrfProtectionMatcher(csrfRequestMatcher()).csrfTokenRepository(csrfTokenRepository())
                 .and()
                 .addFilterAfter(csrfHeaderFilter(), CsrfFilter.class)
-                .logout().permitAll()
-                .logoutSuccessUrl("/");
+                .logout().logoutSuccessUrl("/#").permitAll();
     }
 
     private RequestMatcher csrfRequestMatcher() {
         return new RequestMatcher() {
             // Always allow the HTTP GET method
-            private final Pattern allowedMethods = Pattern.compile("^(GET|HEAD|OPTIONS|TRACE)$");
+            private final Pattern allowedMethods = Pattern.compile("^(GET|POST|HEAD|OPTIONS|TRACE)$");
 
             // Disable CSFR protection on the following urls:
             private final AntPathRequestMatcher[] requestMatchers = {new AntPathRequestMatcher("/uaa/**")};

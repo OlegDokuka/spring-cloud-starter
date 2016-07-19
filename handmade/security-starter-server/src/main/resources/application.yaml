@@ -1,8 +1,11 @@
 server:
   context-path: /uaa
+  use-forward-headers: true
+  port: ${PORT:8762}
 
 security:
-  sessions: STATELESS
+  basic:
+    enabled: false
   user:
     password: password
   ignored: /css/**,/js/**,/favicon.ico,/webjars/**
@@ -10,3 +13,4 @@ security:
 logging:
   level:
     org.springframework.security: DEBUG
+

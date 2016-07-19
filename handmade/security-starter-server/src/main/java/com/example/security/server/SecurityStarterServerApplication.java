@@ -27,15 +27,16 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.security.KeyPair;
+import java.security.Principal;
 
 @SpringBootApplication
 @EnableDiscoveryClient
 public class SecurityStarterServerApplication extends WebMvcConfigurerAdapter {
     @RestController
     private static class TestController {
-        @RequestMapping("/")
-        public boolean ping() {
-            return true;
+        @RequestMapping("/user")
+        public Principal user(Principal user) {
+            return user;
         }
     }
 
