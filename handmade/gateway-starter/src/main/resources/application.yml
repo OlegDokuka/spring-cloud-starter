@@ -35,11 +35,10 @@ security:
   user:
     password: user
   ignored: /,/favicon.ico,/index.html,/home.html,/dashboard.html,/js/**,/css/**,/webjars/**,/uaa/**
-  sessions: ALWAYS
   oauth2:
     client:
-      accessTokenUri: http://localhost:8762/uaa/oauth/token
-      userAuthorizationUri: http://localhost:8762/uaa/oauth/authorize
+      accessTokenUri: http://localhost:${server.port}/uaa/oauth/token
+      userAuthorizationUri: /uaa/oauth/authorize
       clientId: acme
       clientSecret: acmesecret
     resource:
@@ -50,8 +49,6 @@ security:
           -----END PUBLIC KEY-----
       id: openid
       serviceId: ${PREFIX:}resource
-management:
-  security:
-    role: HERO
+
 server:
   port: ${PORT:8080}
