@@ -18,7 +18,6 @@ spring:
     config:
       discovery:
         enabled: true
-        service-id: cloud-config-serve
 eureka:
   client:
     service-url:
