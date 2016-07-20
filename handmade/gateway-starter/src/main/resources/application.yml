@@ -12,21 +12,6 @@ zuul:
       sensitiveHeaders:
       serviceId: sso-server
       stripPrefix: false
-    noun:
-      path: /api/noun
-      serviceId: eureka-starter-noun
-    verb:
-      path: /api/verb
-      serviceId: eureka-starter-verb
-    article:
-      path: /api/article
-      serviceId: eureka-starter-article
-    adjective:
-      path: /api/adjective
-      serviceId: eureka-starter-adjective
-    subject:
-      path: /api/subject
-      serviceId: eureka-starter-subject
 
 
 security:
