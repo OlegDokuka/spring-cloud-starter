@@ -34,7 +34,7 @@ dependencyManagement {
 defaultTasks 'bootRun'
 
 bootRepackage {
-   mainClass = 'com.mycompany.myapp.SentenceApp'
+   mainClass = 'com.mycompany.myapp.WordApp'
 }
 
 war {
@@ -42,7 +42,7 @@ war {
 }
 
 springBoot {
-    mainClass = 'com.mycompany.myapp.SentenceApp'
+    mainClass = 'com.mycompany.myapp.WordApp'
     executable = true
 }
 
@@ -137,14 +137,14 @@ dependencies {
     compile ("com.ryantenney.metrics:metrics-spring:${metrics_spring_version}") {
         exclude(module: 'metrics-core')
         exclude(module: 'metrics-healthchecks')
-    } 
+    }
     compile "commons-lang:commons-lang:${commons_lang_version}"
     compile "commons-io:commons-io:${commons_io_version}"
     compile "javax.inject:javax.inject:${javax_inject_version}"
     compile "javax.transaction:javax.transaction-api"
     compile "org.apache.geronimo.javamail:geronimo-javamail_1.4_mail:${geronimo_javamail_1_4_mail_version}"
     compile "org.hibernate:hibernate-core:${hibernate_entitymanager_version}"
-    
+
     compile "org.hibernate:hibernate-envers"
     compile "org.hibernate:hibernate-validator"
     compile "org.springframework.boot:spring-boot-actuator"
@@ -177,7 +177,7 @@ dependencies {
     compile("io.springfox:springfox-swagger2:${springfox_version}"){
         exclude module: 'mapstruct'
     }
-    
+
     compile "fr.ippon.spark.metrics:metrics-spark-reporter:${metrics_spark_reporter_version}"
     compile "org.mapstruct:mapstruct-jdk8:${mapstruct_version}"
     testCompile "com.jayway.awaitility:awaitility:${awaility_version}"
@@ -189,9 +189,9 @@ dependencies {
     testCompile "junit:junit"
     testCompile "org.mockito:mockito-core"
     testCompile "org.hamcrest:hamcrest-library"
-    
+
     testCompile "io.gatling.highcharts:gatling-charts-highcharts:${gatling_version}"
-    
+
     testCompile "com.h2database:h2"
     optional "org.springframework.boot:spring-boot-configuration-processor:${spring_boot_version}"
     //jhipster-needle-gradle-dependency - JHipster will add additional dependencies here

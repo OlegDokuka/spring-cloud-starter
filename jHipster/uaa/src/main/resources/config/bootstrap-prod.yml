@@ -20,7 +20,7 @@ spring:
             fail-fast: true
             # name of the config server's property source (file.yml) that we want to use
             name: uaa
-            profile: prod
-            label: master
             discovery:
               enabled: true
+            username: admin
+            password: admin
