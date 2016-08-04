@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('JHipsterRegistryApp')
+        .module('JHipsterConfigServerApp')
         .factory('JhiMetricsService', JhiMetricsService);
 
     JhiMetricsService.$inject = ['$rootScope', '$http'];

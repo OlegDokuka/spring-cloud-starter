@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('JHipsterRegistryApp')
+        .module('JHipsterConfigServerApp')
         .config(compileServiceConfig);
 
     compileServiceConfig.$inject = ['$compileProvider','DEBUG_INFO_ENABLED'];

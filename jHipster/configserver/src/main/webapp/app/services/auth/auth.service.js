@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('JHipsterRegistryApp')
+        .module('JHipsterConfigServerApp')
         .factory('Auth', Auth);
 
     Auth.$inject = ['$rootScope', '$state', '$sessionStorage', '$q', 'Principal', 'AuthServerProvider', 'Account', 'LoginService'];

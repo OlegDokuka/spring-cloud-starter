@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('JHipsterRegistryApp')
+        .module('JHipsterConfigServerApp')
         .factory('authInterceptor', authInterceptor);
 
     authInterceptor.$inject = ['$rootScope', '$q', '$location', '$localStorage', '$sessionStorage'];
@@ -18,11 +18,11 @@
             /*jshint camelcase: false */
             config.headers = config.headers || {};
             var token = $localStorage.authenticationToken || $sessionStorage.authenticationToken;
-            
+
             if (token) {
                 config.headers.Authorization = 'Bearer ' + token;
             }
-            
+
             return config;
         }
     }

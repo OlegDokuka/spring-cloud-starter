@@ -9,9 +9,9 @@
                   '</div>',
         controller: jhiAlertErrorController
     };
-    
+
     angular
-        .module('JHipsterRegistryApp')
+        .module('JHipsterConfigServerApp')
         .component('jhiAlertError', jhiAlertError);
 
     jhiAlertErrorController.$inject = ['$scope', 'AlertService', '$rootScope'];
@@ -36,7 +36,7 @@
             );
         }
 
-        var cleanHttpErrorListener = $rootScope.$on('JHipsterRegistryApp.httpError', function (event, httpResponse) {
+        var cleanHttpErrorListener = $rootScope.$on('JHipsterConfigServerApp.httpError', function (event, httpResponse) {
             var i;
             event.stopPropagation();
             switch (httpResponse.status) {
@@ -46,8 +46,8 @@
                 break;
 
             case 400:
-                var errorHeader = httpResponse.headers('X-JHipsterRegistryApp-error');
-                var entityKey = httpResponse.headers('X-JHipsterRegistryApp-params');
+                var errorHeader = httpResponse.headers('X-JHipsterConfigServerApp-error');
+                var entityKey = httpResponse.headers('X-JHipsterConfigServerApp-params');
                 if (errorHeader) {
                     var entityName = entityKey;
                     addErrorAlert(errorHeader, errorHeader, {entityName: entityName});

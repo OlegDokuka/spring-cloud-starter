@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('JHipsterRegistryApp')
+        .module('JHipsterConfigServerApp')
         .directive('hasAuthority', hasAuthority);
 
     function hasAuthority(Principal) {

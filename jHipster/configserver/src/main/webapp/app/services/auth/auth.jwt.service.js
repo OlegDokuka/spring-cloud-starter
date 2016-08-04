@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('JHipsterRegistryApp')
+        .module('JHipsterConfigServerApp')
         .factory('AuthServerProvider', AuthServerProvider);
 
     AuthServerProvider.$inject = ['$http', '$localStorage', '$sessionStorage', '$q'];
@@ -29,7 +29,7 @@
         }
 
         function login (credentials) {
-            
+
               var data = {
                 username: credentials.username,
                 password: credentials.password,
@@ -46,7 +46,7 @@
                     return jwt;
                 }
             }
-            
+
         }
 
         function loginWithToken(jwt, rememberMe) {

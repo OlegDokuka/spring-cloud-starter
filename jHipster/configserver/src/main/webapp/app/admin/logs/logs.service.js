@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('JHipsterRegistryApp')
+        .module('JHipsterConfigServerApp')
         .factory('LogsService', LogsService);
 
     LogsService.$inject = ['$resource'];

@@ -34,7 +34,7 @@ dependencyManagement {
 defaultTasks 'bootRun'
 
 bootRepackage {
-   mainClass = 'com.mycompany.myapp.RegistryApp'
+   mainClass = 'com.mycompany.myapp.ConfigServerApp'
 }
 
 war {
@@ -42,7 +42,7 @@ war {
 }
 
 springBoot {
-    mainClass = 'com.mycompany.myapp.RegistryApp'
+    mainClass = 'com.mycompany.myapp.ConfigServerApp'
     executable = true
 }
 

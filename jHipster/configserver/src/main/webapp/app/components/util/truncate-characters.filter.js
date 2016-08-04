@@ -2,9 +2,9 @@
     'use strict';
 
     angular
-        .module('JHipsterRegistryApp')
+        .module('JHipsterConfigServerApp')
         .filter('characters', characters);
-        
+
     function characters () {
         return charactersFilter;
 
