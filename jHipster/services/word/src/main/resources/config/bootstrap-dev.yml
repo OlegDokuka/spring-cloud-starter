@@ -12,9 +12,7 @@ spring:
         config:
             fail-fast: true
             # name of the config server's property source (file.yml) that we want to use
-            name: uaa
-            profile: dev # profile(s) of the property source
-            label: master
+            name: word
             discovery:
               enabled: true
             username: admin
